@@ -1,0 +1,48 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-authentication/src",
+  "monorepo": true,
+  "root": "apps/nest-authentication",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nest-authentication/tsconfig.app.json"
+  },
+  "projects": {
+    "nest-authentication": {
+      "type": "application",
+      "root": "apps/nest-authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-authentication/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "app": {
+      "type": "application",
+      "root": "apps/app",
+      "entryFile": "main",
+      "sourceRoot": "apps/app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app/tsconfig.app.json"
+      }
+    },
+    "libs": {
+      "type": "library",
+      "root": "libs/libs",
+      "entryFile": "index",
+      "sourceRoot": "libs/libs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/libs/tsconfig.lib.json"
+      }
+    }
+  }
+}
